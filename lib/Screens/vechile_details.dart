@@ -51,6 +51,7 @@ class _VechileDetailsState extends State<VechileDetails> {
       backgroundColor: Colors.cyan[600],
       body: SingleChildScrollView(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             // Padding(
             //   padding: const EdgeInsets.only(top: 16.0),

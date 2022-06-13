@@ -66,20 +66,21 @@ headline1: TextStyle(color: Color.fromARGB(255, 8, 100, 175),fontWeight: FontWei
     
     
                 Container(
-                  height: 80,
                   width: MediaQuery.of(context).size.width,
                   // decoration: BoxDecoration(color:Color.fromARGB(255, 76, 73, 245)),
                   margin: EdgeInsets.only(top: 20),
                   child: Column(
                     children: [
-    
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: RichText(
-                            text: TextSpan(
-                          text: 'RIFD Treaffic Violation  Dectection'.toUpperCase(),
-                          style: titleTextStyle.headline1,
-                        )),
+                    
+                      FittedBox(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: RichText(
+                              text: TextSpan(
+                            text: 'RIFD Treaffic Violation  Dectection'.toUpperCase(),
+                            style: titleTextStyle.headline1,
+                          )),
+                        ),
                       ),
                       Text("System".toUpperCase(),
                           style: titleTextStyle.headline1)
@@ -113,6 +114,7 @@ headline1: TextStyle(color: Color.fromARGB(255, 8, 100, 175),fontWeight: FontWei
                       children: [
                         TextFormField(
                           
+                          
     style: TextStyle(color: Colors.white),
                         
                           validator: (vaule) {
@@ -133,10 +135,12 @@ headline1: TextStyle(color: Color.fromARGB(255, 8, 100, 175),fontWeight: FontWei
                             fillColor: Colors.black.withOpacity(0.2),
                             
       enabledBorder:  OutlineInputBorder(
+        
     
       borderRadius: BorderRadius.circular(15),
         borderSide: const BorderSide(color: Colors.white, width: 0.0),
       ),
+    errorStyle: TextStyle(color: Colors.white),
     
                             border: OutlineInputBorder(
     
@@ -179,10 +183,12 @@ headline1: TextStyle(color: Color.fromARGB(255, 8, 100, 175),fontWeight: FontWei
       borderRadius: BorderRadius.circular(15),
         borderSide: const BorderSide(color: Colors.white, width: 0.0),
       ),
+    errorStyle: TextStyle(color: Colors.white),
     
                             border: OutlineInputBorder(
     
     borderRadius: BorderRadius.circular(15),
+    
     
     
     

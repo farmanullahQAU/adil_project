@@ -145,6 +145,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       appBar: AppBar(
+        
         title: Text("Admin"),
         backgroundColor: Colors.blue[800],
       ),
@@ -177,7 +178,7 @@ class _HomeScreenState extends State<HomeScreen> {
             DottedBorder(
               borderType: BorderType.Circle,
               radius: Radius.circular(60),
-              color: Colors.blueAccent,
+              color: Colors.white,
               dashPattern: const [1, 2, 3, 6, 8],
               strokeWidth: 10,
               strokeCap: StrokeCap.butt,
@@ -200,6 +201,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: 90,
                     padding: const EdgeInsets.only(top: 30.0),
                     child: ElevatedButton(
+                      
                         style: ElevatedButton.styleFrom(
                           primary: Colors.lightBlueAccent, // background
                           onPrimary: Colors.white, // foreground
@@ -210,7 +212,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Text(
                           "Search Vechicle ",
                           style: TextStyle(
-                              color: Colors.yellow,
+                              color: Colors.white,
                               fontWeight: FontWeight.bold),
                         )),
                   ),
@@ -232,7 +234,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Text(
                           "View Challans",
                           style: TextStyle(
-                              color: Colors.yellow,
+                              color: Colors.white,
                               fontWeight: FontWeight.bold),
                         )),
                   ),
@@ -259,7 +261,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Text(
                         "Add Vechile",
                         style: TextStyle(
-                            color: Colors.yellow, fontWeight: FontWeight.bold),
+                            color: Colors.white, fontWeight: FontWeight.bold),
                       )),
                 ),
                 SizedBox(
@@ -280,7 +282,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Text(
                         "Serach",
                         style: TextStyle(
-                            color: Colors.yellow, fontWeight: FontWeight.bold),
+                            color: Colors.white, fontWeight: FontWeight.bold),
                       )),
                 ),
               ],

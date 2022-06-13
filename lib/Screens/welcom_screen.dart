@@ -23,8 +23,8 @@ class _IntroScreen extends State<IntroScreen> {
   Widget build(BuildContext context) {
     PageDecoration pageDecoration = const PageDecoration(
       titleTextStyle: TextStyle(
-          fontSize: 18.0, fontWeight: FontWeight.w700, color: Colors.yellow),
-      bodyTextStyle: TextStyle(fontSize: 25.0, color: Colors.white),
+          fontSize: 18.0, fontWeight: FontWeight.w700, color: Color.fromARGB(255, 206, 25, 85)),
+      bodyTextStyle: TextStyle(fontSize: 25.0, color: Colors.white,fontWeight: FontWeight.bold),
 
       descriptionPadding: EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 16.0),
 
@@ -35,10 +35,11 @@ class _IntroScreen extends State<IntroScreen> {
           end: Alignment.bottomLeft,
           stops: [0.1, 0.5, 0.7, 0.9],
           colors: [
-            Colors.cyanAccent,
+            Color.fromARGB(255, 8, 161, 161),
             Colors.cyan,
             Colors.cyanAccent,
-            Colors.cyan,
+                      Color.fromARGB(255, 8, 161, 161),
+
           ],
         ),
       ),
@@ -118,7 +119,7 @@ class _IntroScreen extends State<IntroScreen> {
     return DottedBorder(
       borderType: BorderType.Circle,
       radius: Radius.circular(20),
-      color: Colors.blueAccent,
+      color: Colors.white,
       dashPattern: [1, 2, 3, 6, 8],
       strokeWidth: 10,
       strokeCap: StrokeCap.butt,
@@ -141,12 +142,33 @@ class ViewSelectionWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.cyan[700],
+     backgroundColor: Colors.cyan,
       body: Center(
-        child: Row(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+              DottedBorder(
+                  borderType: BorderType.Circle,
+                  radius: Radius.circular(60),
+                  color: Colors.blueAccent,
+                  dashPattern: [1, 2, 3, 6, 8],
+                  strokeWidth: 10,
+                  strokeCap: StrokeCap.butt,
+                  padding: EdgeInsets.all(1),
+                  child: CircleAvatar(
+                    backgroundColor: Colors.cyan[300],
+                    backgroundImage: ExactAssetImage(
+                      'assets/images/logon1.png',
+                    ),
+                    radius: 80,
+                  ),
+                ),
+
+                SizedBox(height: 50,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
 
 SizedBox(
   width: Get.width*0.4,
@@ -157,15 +179,16 @@ SizedBox(
   
     onPressed: (){
 
-                 Navigator.of(context).pushAndRemoveUntil(
-              MaterialPageRoute(builder: (context) {
-                    return HomeScreen();
-                  }), (Route<dynamic> route) => false);
-                
+                     Navigator.of(context).pushAndRemoveUntil(
+                  MaterialPageRoute(builder: (context) {
+                        return HomeScreen();
+                      }), (Route<dynamic> route) => false);
+                    
 
     },
   
     style: TextButton.styleFrom(
+      backgroundColor: Colors.cyan[700],
 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
     
   
@@ -177,7 +200,7 @@ shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
   
   ),
 ),
-            
+                
 //             SizedBox(
 // height: 60,
 
@@ -185,19 +208,19 @@ shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
 
 //               child: ElevatedButton.styleFrom(
 
-                
-                  
-                  
+                    
+                      
+                      
 //                   onPressed: (){
 //                  Navigator.of(context).pushAndRemoveUntil(
 //               MaterialPageRoute(builder: (context) {
 //                     return HomeScreen();
 //                   }), (Route<dynamic> route) => false);
-                
+                    
 //                 }, child: Text("RIFD")),
 //             ),
 
-            SizedBox(width: 10,),
+                SizedBox(width: 10,),
   
 SizedBox(
   width: Get.width*0.4,
@@ -212,6 +235,8 @@ Get.to(()=>ImageRecognizerWidget());
     },
   
     style: TextButton.styleFrom(
+      backgroundColor: Colors.cyan[700],
+
 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
 
   
@@ -224,6 +249,8 @@ shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
   ),
 ),
    
+              ],
+            ),
           ],
         ),
       ),
